@@ -14,7 +14,7 @@ interface SearchInputProps {
   value?: string;
   sx?: SxProps<Theme>;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
-  startAdornmentPosition?: "start" | "end"; // Optional position for the icon
+  startAdornmentPosition?: "start" | "end";
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
