@@ -1,0 +1,55 @@
+@import '../_variables';
+@import './typo';
+$table-padding: 0px 20px;
+
+@mixin table {
+	// border: 1px solid $brand-gray8;
+	// border-radius: 2px;
+	border-radius: 4px;
+background: var(--White, #FFF);
+
+/* CardShadow */
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin thead {
+	display: grid;
+	min-height: 60px;
+	align-items: center;
+	column-gap: 10px;
+	padding: $table-padding;
+	background-color: rgba($color: $brand-gray2, $alpha: 1);
+}
+
+@mixin h-cell {
+	@include is-size-h4-b;
+	color: $brand-gray6;
+}
+
+@mixin r-cell {
+	@include is-size-h4-r;
+	color: $brand-gray6;
+
+	&.title {
+		color: $text-primary;
+		cursor: pointer;
+	}
+}
+
+@mixin trow {
+	display: grid;
+	min-height: 70px;
+	align-items: center;
+	column-gap: 10px;
+	padding: $table-padding;
+	border-top: 1px solid $brand-gray8;
+
+	&:hover {
+		background-color: rgba($color: $brand-gray2, $alpha: 0.5);
+	}
+
+	& .t-cell:last-child {
+		@include flexbox;
+		@include justify-content(flex-end);
+	}
+}

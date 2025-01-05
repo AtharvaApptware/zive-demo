@@ -1,0 +1,103 @@
+$spacer: ('0', '1', '2', '4', '8', '16', '24', '32', '40', '48', '56', '64', '96', '128');
+
+@mixin spacing($breakpoints: $grid-breakpoints) {
+	.ml-auto {
+		margin-left: auto;
+	}
+	@each $breakpoint in map-keys($breakpoints) {
+		$infix: breakpoint-infix($breakpoint, $breakpoints);
+
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			.mx#{$infix}-auto {
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.my#{$infix}-auto {
+				margin-top: auto;
+				margin-bottom: auto;
+			}
+			@each $i in $spacer {
+				.mt#{$infix}-#{$i} {
+					margin-top: #{$i}px;
+				}
+				.ml#{$infix}-#{$i} {
+					margin-left: #{$i}px;
+				}
+				.mb#{$infix}-#{$i} {
+					margin-bottom: #{$i}px;
+				}
+				.mr#{$infix}-#{$i} {
+					margin-right: #{$i}px;
+				}
+				.mx#{$infix}-#{$i} {
+					margin-left: #{$i}px;
+					margin-right: #{$i}px;
+				}
+				.my#{$infix}-#{$i} {
+					margin-top: #{$i}px;
+					margin-bottom: #{$i}px;
+				}
+				.m#{$infix}-#{$i} {
+					margin: #{$i}px;
+				}
+
+				.pt#{$infix}-#{$i} {
+					padding-top: #{$i}px;
+				}
+				.pl#{$infix}-#{$i} {
+					padding-left: #{$i}px;
+				}
+				.pb#{$infix}-#{$i} {
+					padding-bottom: #{$i}px;
+				}
+				.pr#{$infix}-#{$i} {
+					padding-bottom: #{$i}px;
+				}
+				.px#{$infix}-#{$i} {
+					padding-left: #{$i}px;
+					padding-right: #{$i}px;
+				}
+				.py#{$infix}-#{$i} {
+					padding-top: #{$i}px;
+					padding-bottom: #{$i}px;
+				}
+				.p#{$infix}-#{$i} {
+					padding: #{$i}px;
+				}
+			}
+		}
+	}
+}
+
+// /*
+// $spacing: 0, 5, 10, 15, 20; // Modify this to generate your spacing classes
+// $unit: px; // Modify this to specify your unit eg: em, pt, %.
+
+// $directions:(
+//   l: left,
+//   t: top,
+//   r: right,
+//   b: bottom,
+//   v: top,
+//   h: left
+// );
+// @mixin generateSpacing($prop, $short  ) {
+//    @each $space in $spacing{
+//     .#{$short}a-#{$space} { #{$prop}: $space + $unit}
+//     @each $key,$val in $directions{
+//       .#{$short}#{$key}-#{$space} {
+//         #{$prop}-#{$val}: $space + $unit;
+//         @if $key == v {
+//           #{$prop}-bottom: $space + $unit;
+//         }
+//         @if $key == h {
+//           #{$prop}-right: $space + $unit;
+//         }
+//       }
+//     }
+//   }
+// }
+// @include generateSpacing(padding , p);
+// @include generateSpacing(margin , m);
+
+// */

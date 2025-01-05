@@ -1,0 +1,43 @@
+@mixin webkit-scroller {
+	&::-webkit-scrollbar {
+		width: 12px;
+		height: 10px;
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-track {
+		border: none;
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-clip: padding-box;
+		background-color: red;
+		border: solid transparent;
+		-webkit-box-shadow: inset -1px -1px 0px transparent, inset 1px 1px 0px transparent;
+
+		&:vertical {
+			border-width: 5px 5px 5px 0;
+		}
+		&:horizontal {
+			border-width: 5px 5px 0 5px;
+		}
+
+		&:hover {
+			// background-color: $brand-gray8;
+		}
+	}
+
+	&::-webkit-scrollbar-button {
+		width: 0;
+		height: 0;
+		display: none;
+	}
+
+	&::-webkit-scrollbar-corner {
+		background-color: transparent;
+	}
+}
+@mixin select-webkit-scroller {
+	@include webkit-scroller;
+}

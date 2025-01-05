@@ -1,0 +1,94 @@
+@use 'styles/shared' as *;
+
+#root {
+  width: 100%;
+  font-size: 14px;
+}
+
+@mixin slick-arrows {
+  background-color: colors(nuetral--hover) !important;
+  border: none !important;
+  border-radius: 30px !important;
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 1;
+}
+
+.slick-slide > div {
+  margin: 0 $bs * 2.5 !important;
+}
+
+.slick-next {
+  @include slick-arrows;
+  &:before {
+    content: '\2794' !important;
+    color: color(buttons) !important;
+    opacity: 1 !important;
+    line-height: 0.2 !important;
+    font-size: 25px !important;
+  }
+}
+
+.slick-prev {
+  @include slick-arrows;
+  &:before {
+    content: '\2794' !important;
+    transform: rotate(180deg);
+    display: inline-block;
+    color: color(buttons) !important;
+    opacity: 1 !important;
+    font-size: 25px !important;
+    margin-top: $bs * 1.5;
+  }
+}
+
+.slick-disabled {
+  background-color: transparent !important;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: color(body);
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: color(primary--default);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: color(body);
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: color(primary--default);
+  }
+}
+
+button:focus,
+button:focus-visible {
+  outline: none !important;
+}
+
+.try-again {
+  background-color: #0A3C5F !important;
+  color: #fff !important;
+  position: absolute;
+  top: 90%;
+  left: 46%;
+  cursor: pointer !important;
+}
+
+.payment-failure-bg {
+  width: 100%;
+  height: 100vh;
+  background: url('./utils/images/Payment-failed.png');
+  background-color: white;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.grecaptcha-badge { 
+  visibility: hidden !important;
+}

@@ -1,0 +1,162 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:list';
+@import '../_variables';
+/* Text-size styles */
+// DO NOT DELETE THIS COMMENT
+/* base size: text---t10----body-2 (14px) */
+// --text---t1----heading-1: 2rem;
+// --text---t2----heading-2: 1.71rem;
+// --text---t3----subhead-1: 1.71rem;
+// --text---t4----subhead-2: 1.43rem;
+// --text---t5----subhead-3: 1.29rem;
+// --text---t6----section--title-1: 1.29rem;
+// --text---t7----section--title-2: 1.14rem;
+// --text---t8----section--content: 1.14rem;
+// --text---t9----body-1: 1rem;
+// --text---t10----body-2: 1rem;
+// --text---t11----labels: 0.93rem;
+// --text---t12----body-3: 0.86rem;
+// --text---t13----body-4: 0.86rem;
+// --text---t14----graph--labels: 0.79rem;
+// --text---t15----calendar--label: 0.71rem;
+// --for--spec---f-s1----page--title: 3.43rem;
+// --for--spec---f-s2----sub--title: 3.43rem;
+// --for--spec---f-s3----card--title: 1.71rem;
+// --for--spec---f-s4----notes: 1.29rem;
+// --for--spec---f-s5----section--labels: 1.14rem;
+
+$base-font-size: 16;
+
+@function toRem($value: number) {
+    $remValue: calc($value / $base-font-size) + rem;
+	// $remValue: list.slash($value,$base-font-size) + rem;
+    @return $remValue;
+}
+
+$typography-font-size: (
+	't1-size': toRem(28), // 28px
+	't2-size': toRem(24), // 24px
+	't3-size': toRem(24), // 24px
+	't4-size': toRem(20), // 20px
+	't5-size': toRem(18), // 18px
+	't6-size': toRem(18), // 18px
+	't7-size': toRem(16), //
+	't8-size': toRem(16), //
+	't9-size': toRem(14), // 14px
+	't10-size': toRem(14), // 14px - Base Font
+	't11-size': toRem(13), // 13px
+	't12-size': toRem(12), // 12px
+	't13-size': toRem(12), // 12px
+	't14-size': toRem(11), // 11px
+	't15-size': toRem(10), // 10px
+);
+
+$typography-line-height: (
+	'l1-size': toRem(38),
+	'l2-size': toRem(28),
+	'l3-size': toRem(28),
+	'l4-size': toRem(28),
+	'l5-size': toRem(22),
+	'l6-size': toRem(22),
+	'l7-size': toRem(20),
+	'l8-size': toRem(26),
+	'l9-size': toRem(20),
+	'l10-size':  toRem(20),
+	'l11-size':  toRem(18),
+	'l12-size':  toRem(16),
+	'l13-size':  toRem(16),
+	'l14-size':  toRem(15),
+	'l15-size':  toRem(14),
+);
+
+$typography-weight: (
+	'w-400': 400,
+	'w-700': 700,
+	'w-500': 500
+);
+
+@mixin base-typo {
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.3px;
+}
+
+@mixin get-typo($size, $line-height, $weight) {
+	@include base-typo;
+	font-size: map.get($typography-font-size, #{$size}#{'-size'});
+	line-height: map.get($typography-line-height, #{$line-height}#{'-size'});
+	font-weight: map.get($typography-weight, #{$weight});
+}
+
+@mixin t1 {
+	@include get-typo('t1', 'l1', 'w-400');
+}
+
+@mixin t2 {
+	@include get-typo('t2', 'l2', 'w-400');
+}
+
+@mixin t3 {
+	@include get-typo('t3', 'l3', 'w-700');
+}
+
+@mixin t4 {
+	@include get-typo('t4', 'l4', 'w-700');
+}
+
+@mixin t5 {
+	@include get-typo('t5', 'l5', 'w-700');
+}
+
+@mixin t6 {
+	@include get-typo('t6', 'l6', 'w-400');
+}
+
+@mixin t7 {
+	@include get-typo('t7', 'l7', 'w-700');
+}
+
+@mixin t8 {
+	@include get-typo('t8', 'l8', 'w-400');
+}
+
+@mixin t9 {
+	@include get-typo('t9', 'l9', 'w-700');
+}
+@mixin t91 {
+	@include get-typo('t9', 'l9', 'w-600');
+}
+
+@mixin t10 {
+	@include get-typo('t10', 'l10', 'w-400');
+}
+
+@mixin t11 {
+	@include get-typo('t11', 'l11', 'w-400');
+}
+
+@mixin t12 {
+	@include get-typo('t12', 'l12', 'w-700');
+}
+
+@mixin t13 {
+	@include get-typo('t13', 'l13', 'w-400');
+}
+
+@mixin t14 {
+	@include get-typo('t14', 'l14', 'w-400');
+}
+@mixin t141 {
+	@include get-typo('t14', 'l14', 'w-600');
+}
+
+@mixin t15 {
+	@include get-typo('t15', 'l15', 'w-700');
+}
+
+@mixin m0 {
+	margin: 0;
+}
+

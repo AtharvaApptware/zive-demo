@@ -1,0 +1,11 @@
+@function color($color-name) {
+	@return var(--#{$color-name});
+}
+
+@function use-icon($icon-name) {
+	@return var(#{$color-name}-icon);
+}
+
+@function if-important($important) {
+	@return #{if($important, '!important', '')};
+}

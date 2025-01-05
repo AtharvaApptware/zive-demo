@@ -1,0 +1,104 @@
+$primary--default: #0A3C5F;
+:root {
+//  Backgrounds
+	--tooltip: #1A2124;
+	--modal: #1A2124;
+	--disabled: #D1D1D2;
+	// --disabled: #CDD8E0;
+
+	--icon--bg: #DBE1E5;
+	--table-header: #51585d;
+	--nav: #EEF0F2;
+	--main: #F9FAFB;
+	--panels-amp--cards: #F7F7FA;
+	// --primary--default: #482EE6;
+	--primary--default: #0A3C5F;
+	
+	--primary--hover: #1a4c6f;
+	--primary--pressed: #EAF6FF;
+	--primary--selected:#107ECB;
+	--danger--default: #FF0000;
+	--danger--hover: #FF4D4F;
+	--danger--pressed: #8A0D17;
+	--danger--selected: #FFF1F0;
+	--left--nav: #03031B;
+	--primary-35: #172232;
+	--secondary--default: #FF5015;
+	--secondary--hover: #de957d;
+	--secondary--pressed: #d16b49;
+	// --secondary--selected: #FFAF94;
+	--secondary--hover: #000000;
+
+	// Outlines
+	--nuetral--hover: #3C4049;
+	// --nuetral--default: #465A6A;
+	--nuetral--default: #0A3C5F;
+	--nuetral--disabled: #CDD8E0;
+	--separator: #DBE1E5;
+	--buttons: #F7F7FA;
+	// --primary--default: #482EE6;
+	--primary--default: #0A3C5F;
+	--primary--hover: #1a4c6f;
+	--primary--pressed: #EAF6FF;
+	--danger--default: #FF0000;
+	--danger--hover: #FF4D4F;
+	--danger--pressed: #8A0D17;
+	--secondary--default: #ff5015;
+	--secondary--hover: #FFAF94;
+	--secondary--pressed: #d16b49;
+
+	// Font Colors
+	--title: #1A2124;
+	// --body: #465A6A;
+	--body: #0A3C5F;
+	--help: #889BAA;
+	--disabled: #D1D1D2;
+	--disabled--light: #DBE7FF;
+	--secondary--disabled: #CDD8E0;
+	--buttons: #F7F7FA;
+	// --primary--default: #482EE6;
+	--primary--default: #0A3C5F;
+	--primary--hover: #1a4c6f;
+	--primary---pressed: #3b3271;
+	--danger--default: #FF0000;
+	--danger--hover: #FF4D4F;
+	--danger--pressed: #8A0D17;
+
+	// Icon Color Scheme
+	--nuetral--hover: #1A2124;
+	--nuetral--default: #3F4A4F;
+	--nuetral--disabled: #CDD8E0;
+	--buttons: #F7F7FA;
+	// --primary--default: #482EE6;
+	--primary--default: #0A3C5F;
+	--primary--hover: #1a4c6f;
+	--primary--pressed: #EAF6FF;
+	--primary--selected: #107ECB;
+	--danger--default: #FF0000;
+	--danger--hover: #FF4D4F;
+	--danger--pressed: #8A0D17;
+	--secondary--default: #ff5015;
+	// --secondary--hover: #FFAF94;
+	--secondary--hover: #000000;
+	--secondary--pressed: #d16b49;
+	// --secondary--selected: #FFAF94;
+	--secondary--hover: #000000;
+	// Semantics
+	--progressbar--bg: #E7EBEE;
+	--success--font: #134A17;
+	--success--icon: #38CD45;
+	--success--outline: #8DE294;
+	--success--bg: #EBFAEC;
+	--info--font: #02217E;
+	--info--icon: #4976FC;
+	--info--outline: #94AAEA;
+	--info--bg: #E6ECFE;
+	--alert--font: #664D00;
+	--alert--icon: #FFBF00;
+	--alert--outline: #F0C442;
+	--alert--bg: #FFF2CC;
+	--error--font: #7A150A;
+	--error--icon: #FF4B36;
+	--error--outline: #FF5E4C;
+	--error--bg: #FFE8E5;
+}

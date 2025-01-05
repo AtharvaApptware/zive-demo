@@ -1,0 +1,52 @@
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-gutter-width: 24px !default;
+$grid-row-columns: 6 !default;
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-gutter-widths: (
+  xs: 12px,
+  // eXtra Small
+  sm: 16px,
+  // SMall
+  md: 16px,
+  // MeDium
+  lg: 24px,
+  // LarGe
+) !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  // eXtra Small
+  sm: 767px,
+  // SMall
+  md: 1440px,
+  // MeDium
+  lg: 1600px,
+  // LarGe
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 600px,
+  md: 1440px,
+  lg: 1600px,
+) !default;
+
+$sidebar-width: 290px;
+$sidebar-width-closed: 72px;
+$base-spacer: 0.25rem; // 4px;
+$bs: $base-spacer; // Use this to give padding and margin between elements. This will help in responsive spacing.

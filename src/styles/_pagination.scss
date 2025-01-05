@@ -1,0 +1,39 @@
+@import 'shared';
+
+.pagination {
+	@include list-unstyled;
+	@include flexbox;
+	@include justify-content(center);
+	padding: 10px 0px;
+	// background-color: rgba($color: $brand-gray2, $alpha: 1);
+
+	& li {
+		transition: all 0.2s linear;
+		cursor: pointer;
+
+		& a {
+			padding: 5px 12px;
+			display: inline-block;
+		}
+
+		&:hover {
+			// background-color: rgba($color: $brand-gray8, $alpha: 0.8);
+		}
+
+		&.active {
+			// background-color: rgba($color: $brand-gray2, $alpha: 1);
+			// color: $text-primary;
+			font-weight: 700;
+			border-radius: 2px;
+			// color: $white;
+			// background-color: $bg-primary;
+			//   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+			// box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+		}
+
+		&.disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+		}
+	}
+}

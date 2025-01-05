@@ -1,0 +1,44 @@
+@import './mixins/typo';
+
+// Generating classes for each fotn variant from t1 - t15
+@for $i from 1 through 15 {
+	.text-t#{$i}-400{
+    	@include get-typo('t#{$i}', 'l#{$i}', 'w-400');
+	}
+
+	.text-t#{$i}-700 {
+    	@include get-typo('t#{$i}', 'l#{$i}', 'w-700');
+	}
+}
+
+.h1, h1{
+	@include t1;
+}
+
+.h2, h2{
+	@include t2;
+}
+
+.h3, h3{
+	@include t3;
+}
+
+.h4, h4{
+	@include t4;
+}
+
+.h5, h5{
+	@include t5;
+}
+
+.h6, h6{
+	@include t6;
+}
+
+body, p {
+	@include t10;
+}
+
+label {
+	@include t11;
+}
